@@ -29,10 +29,10 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/aboutus.js"
     ],
-    "/aboutus/[developerID]": [
+    "/aboutus/[id]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/aboutus/[developerID].js"
+      "static/chunks/pages/aboutus/[id].js"
     ]
   },
   "ampFirstPages": []

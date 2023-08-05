@@ -1,3 +1,6 @@
+//our-domain.com/aboutus
+import Link from "next/link";
+
 export const details = [
   { id: 1, name: "Yash", role: "Senior Developer" },
 
@@ -5,15 +8,23 @@ export const details = [
 
   { id: 3, name: "Suresh", role: "Frontend Developer" },
 ];
+
 function Aboutus() {
   return (
-    <h3>
-      {details.map((dev) => (
-        <p key={dev.id}>
-          {dev.name} - {dev.role}
-        </p>
-      ))}
-    </h3>
+    <>
+      <h3>Developer's details</h3>
+      <ul>
+        {details.map((dev) => (
+          <li key={dev.id}>
+            <Link href={`/aboutus/${dev.id}`}>
+              <a>
+                {dev.name}
+              </a>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
 export default Aboutus;
